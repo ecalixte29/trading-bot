@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+pandas
+numpy
+polygon-api-client
+python-dotenv
+openai
+yfinance
+# Add other libraries as needed, e.g., for Tradier, specific ML/TA libraries 

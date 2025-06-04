@@ -1,0 +1,53 @@
+# Environment variables
+.env
+.config
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Database files
+forex_signals.db
+stock_options_signals.db
+test_trading_signals.db # From the database_logger.py example
+trading_signals.db      # Default db name, if created before splitting
+
+# Optional: SQLite journal files (these are temporary files SQLite creates)
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Log files
+*.log
+*.log.*
+logs/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/ 
