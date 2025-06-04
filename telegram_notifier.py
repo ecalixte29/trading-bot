@@ -77,4 +77,5 @@ if __name__ == '__main__':
         )
         notifier.send_message(prediction_msg)
         
-        print("Test message(s) sent (if configured correctly, environment variables are set, and bot has permissions for the chat).") 
+        print("Test message(s) sent (if configured correctly, environment variables are set, and bot has permissions for the chat).")
+        run_trading_cycle() 

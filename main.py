@@ -597,15 +597,10 @@ def run_forex_trading_cycle():
 # --- Main Execution --- 
 if __name__ == "__main__":
     print("Starting Trading Bot...")
-    # You can choose which cycle to run, or run them based on a flag/argument
-
     if FOREX_TRADING_ENABLED:
         print("Forex trading is ENABLED. Starting Forex cycle.")
-        # Ensure all necessary configurations (FOREX_PAIR_SYMBOL, IB_PORT, etc.) are defined above.
         run_forex_trading_cycle()
     else:
-        print("Forex trading is DISABLED. Attempting to start Options trading cycle.")
-        # run_trading_cycle() # Uncomment to run the existing options cycle
-        print("To run the options trading cycle, set FOREX_TRADING_ENABLED = False and uncomment run_trading_cycle() call.")
-
-    print("Trading Bot finished or was interrupted.") 
+        print("Forex trading is DISABLED. Starting Options trading cycle.")
+        run_trading_cycle()
+        print("Trading Bot finished or was interrupted.") 
