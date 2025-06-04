@@ -1,0 +1,1 @@
+# This directory will contain the tools and scripts for backtesting trading strategies against historical data. 
