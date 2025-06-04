@@ -1,5 +1,6 @@
 import telegram
 import os # Import os to access environment variables
+from telegram.constants import ParseMode # Import ParseMode for python-telegram-bot v20+
 
 class TelegramNotifier:
     def __init__(self, bot_token: str, chat_id: str):
@@ -20,13 +21,16 @@ class TelegramNotifier:
     def send_message(self, message: str):
         if self.bot and self.chat_id:
             try:
-                self.bot.send_message(chat_id=self.chat_id, text=message, parse_mode=telegram.ParseMode.MARKDOWN)
+                self.bot.send_message(chat_id=self.chat_id, text=message, parse_mode=ParseMode.MARKDOWN)
                 print(f"Telegram message sent: {message}")
+                return True
             except Exception as e:
                 print(f"TelegramNotifier: Error sending message: {e}")
+                return False
         else:
             # print(f"TelegramNotifier: Bot not initialized or Chat ID missing. Message not sent: {message}")
-            pass # Silently fail if not configured, or log if preferred
+            pass
+            return False
 
     def format_prediction_message(self, asset: str, signal: str, entry_price: float, stop_loss: float, take_profit: float, strategy_name: str = "Strategy"):
         """Formats a trading prediction message in Markdown."""
