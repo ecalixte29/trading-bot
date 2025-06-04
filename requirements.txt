@@ -7,4 +7,5 @@ polygon-api-client
 python-dotenv
 openai
 yfinance
-# Add other libraries as needed, e.g., for Tradier, specific ML/TA libraries 
+python-telegram-bot
+ibapi# Add other libraries as needed, e.g., for Tradier, specific ML/TA libraries 
